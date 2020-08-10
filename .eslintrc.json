@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": ["airbnb", "prettier", "prettier/standard", "prettier/react", "plugin:react/recommended"],
+    "parser": "babel-eslint",
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": ["error"],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".js", ".jsx"]
+            }
+        ],
+        "linebreak-style": "off",
+        "import/prefer-default-export": "off"
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}
