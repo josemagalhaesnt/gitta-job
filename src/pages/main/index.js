@@ -33,7 +33,7 @@ export default class Main extends Component {
                 <Grid container spacing={2}>
                     {jobPositions &&
                         jobPositions.map((job) => (
-                            <Grid item xs={4}>
+                            <Grid item xs={6}>
                                 <MaterialCard key={job.id} variant="elevated" actionLink={`/job/details/${job.id}`}>
                                     <Typography color="textSecondary" gutterBottom>
                                         {this.formatResponse(job.title)}
