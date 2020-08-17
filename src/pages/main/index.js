@@ -3,6 +3,7 @@ import api from '../../services/api';
 import MaterialCard from '../../components/MaterialCard';
 import { Typography, Grid } from '@material-ui/core';
 import './styles.scss';
+import FilterBar from '../../components/FilterBar';
 
 export default class Main extends Component {
     state = {
@@ -30,11 +31,12 @@ export default class Main extends Component {
 
         return (
             <div className="JobListContainer">
+                <FilterBar />
                 <Grid container spacing={2}>
                     {jobPositions &&
                         jobPositions.map((job) => (
-                            <Grid item xs={6}>
-                                <MaterialCard key={job.id} variant="elevated" actionLink={`/job/details/${job.id}`}>
+                            <Grid key={job.id} item xs={4}>
+                                <MaterialCard variant="elevation" actionLink={`/job/details/${job.id}`}>
                                     <Typography color="textSecondary" gutterBottom>
                                         {this.formatResponse(job.title)}
                                     </Typography>

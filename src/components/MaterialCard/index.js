@@ -9,17 +9,21 @@ const MaterialCard = ({ title, body, actionLink, variant, children }) => {
   const useStyles = makeStyles({
     root: {
       maxWidth: 345,
+      minHeight: 175,
     },
+    actions: {
+      alignSelf: 'flex-end',
+    }
   });
 
   const classes = useStyles();
   
   return (
     <Card className={classes.root} variant={variant}>
-      <CardContent>
+      <CardContent className={classes.content}>
         {children}
       </CardContent>
-      <CardActions>
+      <CardActions className={classes.actions}>
         <Button size="small" color="primary">
           <Link to={actionLink}> Learn More </Link>
         </Button>
