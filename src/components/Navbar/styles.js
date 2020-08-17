@@ -5,7 +5,7 @@ export const StyledNavbar = styled.nav`
     align-items: center;
     justify-content: space-between;
 
-    background-color: #2A2373;
+    background-color: var(--color-primary);
     color: white;
     height: 63px;
     padding-left: 5%;
