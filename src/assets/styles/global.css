@@ -1,0 +1,38 @@
+:root {
+    --color-black: #000000ff;
+    --color-primary: #14213dff;
+    --color-secondary: #fca311ff;
+    --color-light-grey: #e5e5e5ff;
+    --color-white: #ffffffff;
+
+    --body-pd-top: 50px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 60%;
+
+    @media (max-width: 768px) {
+        font-size: 62.5%;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+#root {
+    min-height: calc(100vh - var(--body-pd-top));
+    display: flex;
+    flex-direction: column;
+}
