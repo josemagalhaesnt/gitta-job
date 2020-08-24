@@ -1,4 +1,4 @@
-import { shade, rgba, lighten, cssVar } from 'polished';
+import { shade, rgba } from 'polished';
 
 export const borderFeedback = (size, color) => {
     const borderFocusColor = shade(0.35, color);
